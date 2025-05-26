@@ -72,19 +72,25 @@
     </nav>
     
     <div class="container mt-5">
-        <h2 class="mb-4">Tabela de Cidade</h2>
+        <h2 class="mb-4">Tabela de Avaliações</h2>
         <table class="table">
             <thead>
                 <tr>
-                    <th scope="col">Nome</th>
-                    <th scope="col">UF</th>
+                    <th scope="col">Descrição</th>
+                    <th scope="col">Curso</th>
+                    <th scope="col">Disciplina</th>
+                    <th scope="col">Nota</th>
+                    <th scope="col">Tipo de Avaliação</th>
                 </tr>
             </thead>
             <tbody>
-                {% for cidades in cidades %}
+                {% for avaliacoes in avaliacoes %}
                     <tr>
-                        <td>{{ cidades.nome }}</td>
-                        <td>{{ cidades.uf }}</td>
+                        <td>{{ avaliacoes.descricao }}</td>
+                        <td>{{ avaliacoes.curso }}</td>
+                        <td>{{ avaliacoes.disciplina }}</td>
+                        <td>{{ avaliacoes.nota }}</td>
+                        <td>{{ avaliacoes.tipo_avaliacao }}</td>
                     </tr>
                 {% endfor %}
             </tbody>

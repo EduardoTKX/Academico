@@ -72,19 +72,27 @@
     </nav>
     
     <div class="container mt-5">
-        <h2 class="mb-4">Tabela de Cidade</h2>
+        <h2 class="mb-4">Tabela de Matriculas</h2>
         <table class="table">
             <thead>
                 <tr>
                     <th scope="col">Nome</th>
-                    <th scope="col">UF</th>
+                    <th scope="col">Curso</th>
+                    <th scope="col">Instituição</th>
+                    <th scope="col">Data de Inicio</th>
+                    <th scope="col">Previsão de termino</th>
+                    <th scope="col">Turma</th>
                 </tr>
             </thead>
             <tbody>
-                {% for cidades in cidades %}
+                {% for matriculas in matriculas %}
                     <tr>
-                        <td>{{ cidades.nome }}</td>
-                        <td>{{ cidades.uf }}</td>
+                        <td>{{ matriculas.pessoa }}</td>
+                        <td>{{ matriculas.curso }}</td>
+                        <td>{{ matriculas.instituicao }}</td>
+                        <td>{{ matriculas.data_inicio }}</td>
+                        <td>{{ matriculas.data_previsao_termino }}</td>
+                        <td>{{ matriculas.turma }}</td>
                     </tr>
                 {% endfor %}
             </tbody>

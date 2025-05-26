@@ -72,19 +72,23 @@
     </nav>
     
     <div class="container mt-5">
-        <h2 class="mb-4">Tabela de Cidade</h2>
+        <h2 class="mb-4">Tabela de Instituição</h2>
         <table class="table">
             <thead>
                 <tr>
                     <th scope="col">Nome</th>
-                    <th scope="col">UF</th>
+                    <th scope="col">Site</th>
+                    <th scope="col">Telefone</th>
+                    <th scope="col">Cidade</th>
                 </tr>
             </thead>
             <tbody>
-                {% for cidades in cidades %}
+                {% for instituicoes in instituicoes %}
                     <tr>
-                        <td>{{ cidades.nome }}</td>
-                        <td>{{ cidades.uf }}</td>
+                        <td>{{ instituicoes.nome }}</td>
+                        <td>{{ instituicoes.site }}</td>
+                        <td>{{ instituicoes.telefone }}</td>
+                        <td>{{ instituicoes.cidade }}</td>
                     </tr>
                 {% endfor %}
             </tbody>

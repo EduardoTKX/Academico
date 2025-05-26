@@ -19,4 +19,5 @@ urlpatterns = [
     path('ocorrencia/', OcorrenciasView.as_view(), name='ocorrencia'),
     path('cursodisciplina/', CursoDisciplinaView.as_view(), name='cursodisciplina'),
     path('tipoavaliacao/', TipoAvaliacaoView.as_view(), name='tipoavaliacao'),
+    path('cidade/', CidadesView.as_view(), name='cidade'),
 ]

@@ -56,9 +56,18 @@ class TurmasAdmin(admin.ModelAdmin):
     search_fields = ("nome",)
     inlines = [AlunosInline]
 
+class InstituicaoInline(admin.TabularInline):
+    model = Instituicao
+    extra = 1
+
+class CidadeAdmin(admin.ModelAdmin):
+    list_display = ("nome",)
+    search_fields = ("nome",)
+    inlines = [InstituicaoInline]
 
 
-admin.site.register(Cidade)
+
+admin.site.register(Cidade, CidadeAdmin)
 admin.site.register(Pessoa)
 admin.site.register(Instituicao, InstituicaoAdmin)
 admin.site.register(AreaSaber, AreaSaberAdmin)

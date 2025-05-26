@@ -72,19 +72,23 @@
     </nav>
     
     <div class="container mt-5">
-        <h2 class="mb-4">Tabela de Cidade</h2>
+        <h2 class="mb-4">Tabela de Faltas</h2>
         <table class="table">
             <thead>
                 <tr>
                     <th scope="col">Nome</th>
-                    <th scope="col">UF</th>
+                    <th scope="col">Curso</th>
+                    <th scope="col">Disciplina</th>
+                    <th scope="col">N° de Faltas</th>
                 </tr>
             </thead>
             <tbody>
-                {% for cidades in cidades %}
+                {% for frequencias in frequencias %}
                     <tr>
-                        <td>{{ cidades.nome }}</td>
-                        <td>{{ cidades.uf }}</td>
+                        <td>{{ frequencias.pessoa }}</td>
+                        <td>{{ frequencias.curso }}</td>
+                        <td>{{ frequencias.disciplina }}</td>
+                        <td>{{ frequencias.numero_faltas }}</td>
                     </tr>
                 {% endfor %}
             </tbody>

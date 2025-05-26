@@ -72,19 +72,21 @@
     </nav>
     
     <div class="container mt-5">
-        <h2 class="mb-4">Tabela de Cidade</h2>
+        <h2 class="mb-4">Tabela de Disciplinas</h2>
         <table class="table">
             <thead>
                 <tr>
                     <th scope="col">Nome</th>
-                    <th scope="col">UF</th>
+                    <th scope="col">Area</th>
+                    <th scope="col">Curso</th>
                 </tr>
             </thead>
             <tbody>
-                {% for cidades in cidades %}
+                {% for disciplinas in disciplinas %}
                     <tr>
-                        <td>{{ cidades.nome }}</td>
-                        <td>{{ cidades.uf }}</td>
+                        <td>{{ disciplinas.nome }}</td>
+                        <td>{{ disciplinas.area_saber }}</td>
+                        <td>{{ disciplinas.curso }}</td>
                     </tr>
                 {% endfor %}
             </tbody>
